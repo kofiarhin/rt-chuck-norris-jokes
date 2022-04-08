@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Joke from "./Component/Joke/Joke.component";
+import Footer from "./Component/Footer/Footer.component";
 
 const App = () => {
   const [joke, setJoke] = useState({});
@@ -25,6 +26,8 @@ const App = () => {
   return (
     <div className="container">
       {!isPending && <Joke joke={joke} onGetJoke={onGetJoke} />}
+
+      <Footer />
     </div>
   );
 };

@@ -1,3 +1,3 @@
 # A react Application about Chuck Norris Jokes
 
-# [live Demo](https://624fd4a97de0fc3738f23bdc--strong-sherbet-bec591.netlify.app/)
+# [live Demo](https://624fd929cda6ce3a93a769d3--strong-sherbet-bec591.netlify.app/)

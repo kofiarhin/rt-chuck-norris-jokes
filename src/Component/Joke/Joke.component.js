@@ -7,10 +7,10 @@ const Joke = ({ joke = {}, onGetJoke }) => {
   return (
     <div className="joke">
       <h1> {value} </h1>
-      <p> ~ chuck Norris </p>
+      <p> ~ Chuck Norris </p>
 
       <div className="button-wrapper">
-        <button onClick={onGetJoke}>Load More</button>
+        <button onClick={onGetJoke}>More</button>
       </div>
     </div>
   );

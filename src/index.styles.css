@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
@@ -10,10 +12,10 @@ html, body {
 }
 
 .container {
-  width: 540px;
+  width: 800px;
 max-width: 90%;
 margin: 0 auto;
-min-height: 100vh;
+min-height: 80vh;
 display: grid;
 place-items: center;
 }
