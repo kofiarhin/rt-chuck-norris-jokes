@@ -1,0 +1,32 @@
+.joke {
+    text-align: center; 
+}
+
+.joke h1  {
+font-size: 3rem; 
+}
+.joke p {
+    font-size: 1.2rem;
+}
+
+
+.joke button {
+    background-color: black;
+    color: white;
+    padding: 0.8rem 3rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.joke .button-wrapper {
+    text-align: center;
+}
+
+@media(max-width: 650px) {
+
+    .joke h1 {
+        font-size: 1.2rem;
+    }
+    .joke p {
+        font-size: 1rem;
+    }
+}

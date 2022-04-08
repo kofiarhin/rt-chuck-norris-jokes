@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Joke from "./Component/Joke/Joke.component";
 
-function App() {
+const App = () => {
+  const [joke, setJoke] = useState({});
+  const [isPending, setIsPending] = useState(true);
+  useEffect(() => {
+    getJoke();
+  }, []);
+
+  const getJoke = async () => {
+    setIsPending(true);
+    fetch("https://api.chucknorris.io/jokes/random")
+      .then((response) => response.json())
+      .then((result) => {
+        setIsPending(false);
+        setJoke(result);
+      });
+  };
+
+  const onGetJoke = () => {
+    getJoke();
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {!isPending && <Joke joke={joke} onGetJoke={onGetJoke} />}
     </div>
   );
-}
+};
 
 export default App;
